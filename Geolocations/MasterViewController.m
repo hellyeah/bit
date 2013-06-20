@@ -253,9 +253,11 @@
 	// Configure the new event with information from the location.
 	CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-
+    NSNumber *thumb = [NSNumber numberWithBool:true];
+    
     PFObject *object = [PFObject objectWithClassName:@"Location"];
     
+    [object setObject:[NSNumber numberWithBool:thumb] forKey:@"thumb"];
     [object setObject:geoPoint forKey:@"location"];
     
     [object saveEventually:^(BOOL succeeded, NSError *error) {
