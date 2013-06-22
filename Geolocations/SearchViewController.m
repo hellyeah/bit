@@ -9,19 +9,29 @@
 #import "CircleOverlay.h"
 #import "GeoPointAnnotation.h"
 #import "GeoQueryAnnotation.h"
+#import "parseCSV.h"
 
 enum PinAnnotationTypeTag {
     PinAnnotationTypeTagGeoPoint = 0,
     PinAnnotationTypeTagGeoQuery = 1
 };
 
+enum segmentedControlIndicies {
+    kSegmentStandard = 0,
+    kSegmentSatellite = 1,
+    kSegmentHybrid = 2,
+    kSegmentTerrain = 3
+};
+
 @interface SearchViewController ()
+- (NSDictionary *)heatMapData;
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, assign) CLLocationDistance radius;
 @property (nonatomic, strong) CircleOverlay *targetOverlay;
 @end
 
 @implementation SearchViewController
+@synthesize mapView = _mapView;
 @synthesize thumbsUp;
 @synthesize thumbsDown;
 @synthesize buttonsView;
@@ -203,6 +213,11 @@ enum PinAnnotationTypeTag {
 
 #pragma mark - MKMapViewDelegate
 
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    return [[HeatMapView alloc] initWithOverlay:overlay];
+}
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     static NSString *GeoPointAnnotationIdentifier = @"RedPinAnnotation";
     static NSString *GeoQueryAnnotationIdentifier = @"PurplePinAnnotation";
@@ -246,6 +261,7 @@ enum PinAnnotationTypeTag {
     return nil;
 }
 
+/*
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
     static NSString *CircleOverlayIdentifier = @"Circle";
     
@@ -277,6 +293,7 @@ enum PinAnnotationTypeTag {
     
     return nil;
 }
+*/
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
     if (![view isKindOfClass:[MKPinAnnotationView class]] || view.tag != PinAnnotationTypeTagGeoQuery) {
@@ -344,6 +361,11 @@ enum PinAnnotationTypeTag {
 
 - (void)configureOverlay {
     
+    HeatMap *hm = [[HeatMap alloc] initWithData:[self heatMapData]];
+    [self.mapView addOverlay:hm];
+    [self.mapView setVisibleMapRect:[hm boundingMapRect] animated:YES];
+
+/*
     NSLog(@"%@", self.location);
     if (self.location) {
         [self.mapView removeAnnotations:self.mapView.annotations];
@@ -357,6 +379,7 @@ enum PinAnnotationTypeTag {
         
         [self updateLocations];
     }
+*/
 }
 
 - (void)updateLocations {
@@ -445,6 +468,28 @@ enum PinAnnotationTypeTag {
 
 - (void)stopLocationManager{
     [self.locationManager stopUpdatingLocation];
+}
+
+- (NSDictionary *)heatMapData
+{
+    CSVParser *parser = [CSVParser new];
+    NSString *csvFilePath = [[NSBundle mainBundle] pathForResource:@"Breweries_clean" ofType:@"csv"];
+    [parser openFile:csvFilePath];
+    NSArray *csvContent = [parser parseFile];
+    
+    NSMutableDictionary *toRet = [[NSMutableDictionary alloc] initWithCapacity:[csvContent count]];
+    
+    for (NSArray *line in csvContent) {
+        
+        MKMapPoint point = MKMapPointForCoordinate(
+                                                   CLLocationCoordinate2DMake([[line objectAtIndex:1] doubleValue],
+                                                                              [[line objectAtIndex:0] doubleValue]));
+        
+        NSValue *pointValue = [NSValue value:&point withObjCType:@encode(MKMapPoint)];
+        [toRet setObject:[NSNumber numberWithInt:1] forKey:pointValue];
+    }
+    
+    return toRet;
 }
 
 @end
