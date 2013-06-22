@@ -25,6 +25,8 @@ enum PinAnnotationTypeTag {
 
 @implementation SearchViewController
 @synthesize locationManager = _locationManager;
+@synthesize thumbsUp;
+@synthesize thumbsDown;
 
 
 #pragma mark - UIViewController
@@ -139,6 +141,16 @@ enum PinAnnotationTypeTag {
 
 #pragma mark - SearchViewController
 
+- (IBAction)thumbsUp:(id)sender {
+    [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:true]];
+    [thumbsUp setHidden:TRUE];
+}
+
+- (IBAction)thumbsDown:(id)sender {
+    [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:false]];
+    [thumbsDown setHidden:TRUE];
+}
+
 - (void)setInitialLocation:(CLLocation *)aLocation {
     self.location = aLocation;
     self.radius = 1000;
@@ -199,10 +211,6 @@ enum PinAnnotationTypeTag {
             }
         }
     }];
-}
-
-- (IBAction)thumbsDown:(id)sender {
-    [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:false]];
 }
 
 #pragma mark - MasterViewController
@@ -271,4 +279,9 @@ enum PinAnnotationTypeTag {
     NSLog(@"next");
 }
 
+- (void)viewDidUnload {
+    [self setThumbsUp:nil];
+    [self setThumbsDown:nil];
+    [super viewDidUnload];
+}
 @end

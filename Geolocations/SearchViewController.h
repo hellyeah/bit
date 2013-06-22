@@ -14,11 +14,15 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UISlider *slider;
+- (IBAction)thumbsUp:(id)sender;
+- (IBAction)thumbsDown:(id)sender;
 
 - (void)setInitialLocation:(CLLocation *)aLocation;
-- (IBAction)thumbsDown:(id)sender;
 
 - (IBAction)insertCurrentLocationWithThumb:(id)sender thumb:(NSNumber *)thumb;
 - (void)printObjects:(NSMutableArray *)blah;
+
+@property (strong, nonatomic) IBOutlet UIButton *thumbsUp;
+@property (strong, nonatomic) IBOutlet UIButton *thumbsDown;
 
 @end
