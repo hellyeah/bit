@@ -441,6 +441,11 @@ enum segmentedControlIndicies {
           newLocation.coordinate.longitude, newLocation.horizontalAccuracy, abs,
             ([newLocation.timestamp timeIntervalSinceNow]));
     
+    [self.mapView setRegion:MKCoordinateRegionMake(
+                                                   CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude),
+                                                   MKCoordinateSpanMake(0.01, 0.01)
+                                                   )];
+    
     NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
     if (locationAge > 10.0) return;
     
