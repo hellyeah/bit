@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7YQ-vl-r3O">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="7YQ-vl-r3O">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="374"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
@@ -105,8 +105,6 @@
             <relationships>
                 <relationship kind="action" name="insertCurrentLocation:"/>
                 <relationship kind="action" name="insertCurrentLocationWithThumb:thumb:"/>
-                <relationship kind="action" name="sliderDidTouchUp:" candidateClass="UISlider"/>
-                <relationship kind="action" name="sliderValueChanged:" candidateClass="UISlider"/>
                 <relationship kind="action" name="thumbsDown:"/>
                 <relationship kind="action" name="thumbsUp:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
