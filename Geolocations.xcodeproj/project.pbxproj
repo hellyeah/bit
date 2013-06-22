@@ -43,7 +43,7 @@
 		C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleOverlay.m; path = GeoLocations/CircleOverlay.m; sourceTree = SOURCE_ROOT; };
 		C4370E4E15DECC3100ED6B24 /* GeoQueryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoQueryAnnotation.h; path = GeoLocations/GeoQueryAnnotation.h; sourceTree = SOURCE_ROOT; };
 		C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoQueryAnnotation.m; path = GeoLocations/GeoQueryAnnotation.m; sourceTree = SOURCE_ROOT; };
-		C451214C15C885E3005E733A /* GeoLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C451214C15C885E3005E733A /* Bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451215015C885E3005E733A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C451215215C885E3005E733A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C451215415C885E3005E733A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,7 +112,7 @@
 		C451214D15C885E3005E733A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C451214C15C885E3005E733A /* GeoLocations.app */,
+				C451214C15C885E3005E733A /* Bit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			);
 			name = GeoLocations;
 			productName = Geolocations;
-			productReference = C451214C15C885E3005E733A /* GeoLocations.app */;
+			productReference = C451214C15C885E3005E733A /* Bit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -303,7 +303,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -323,7 +323,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -340,7 +340,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoLocations/GeoLocations-Prefix.pch";
 				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
-				PRODUCT_NAME = GeoLocations;
+				PRODUCT_NAME = Bit;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -356,7 +356,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoLocations/GeoLocations-Prefix.pch";
 				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
-				PRODUCT_NAME = GeoLocations;
+				PRODUCT_NAME = Bit;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};

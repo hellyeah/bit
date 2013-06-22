@@ -1,60 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zsb-7P-aPf">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="11">
-            <objects>
-                <navigationController id="3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="zsb-7P-aPf" kind="relationship" relationship="rootViewController" id="Dfc-iC-vvm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1" y="64"/>
-        </scene>
         <!--Search View Controller - Search-->
         <scene sceneID="mq9-FE-oAg">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="zsb-7P-aPf" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJJ-pY-oWP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="7YQ-vl-r3O">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="374"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="zsb-7P-aPf" id="xWE-Lh-urf"/>
                                 </connections>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mfs-cz-GGq">
-                                <rect key="frame" x="0.0" y="374" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Radius (m)" style="plain" id="TC7-Go-cHo"/>
-                                    <barButtonItem style="plain" id="JIf-tK-Qo8">
-                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="100" maxValue="10000" id="6gZ-Rh-ctJ">
-                                            <rect key="frame" x="126" y="11" width="180" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="sliderDidTouchUp:" destination="zsb-7P-aPf" eventType="touchUpOutside" id="As3-Pm-AxP"/>
-                                                <action selector="sliderDidTouchUp:" destination="zsb-7P-aPf" eventType="touchUpInside" id="D94-QQ-kX7"/>
-                                                <action selector="sliderValueChanged:" destination="zsb-7P-aPf" eventType="valueChanged" id="9ND-GE-std"/>
-                                            </connections>
-                                        </slider>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thumbsUp" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LJe-bI-ELZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -69,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thumbsDown" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6bG-dp-qTB">
-                                <rect key="frame" x="0.0" y="188" width="320" height="187"/>
+                                <rect key="frame" x="0.0" y="231" width="320" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -89,7 +56,6 @@
                     <navigationItem key="navigationItem" title="Search" id="DjZ-z5-1yC"/>
                     <connections>
                         <outlet property="mapView" destination="7YQ-vl-r3O" id="BKQ-qB-pRh"/>
-                        <outlet property="slider" destination="6gZ-Rh-ctJ" id="EVO-ss-w0f"/>
                         <outlet property="thumbsDown" destination="6bG-dp-qTB" id="IKg-Xt-YkV"/>
                         <outlet property="thumbsUp" destination="LJe-bI-ELZ" id="gGP-5a-1ce"/>
                     </connections>
@@ -99,21 +65,6 @@
             <point key="canvasLocation" x="1051" y="64"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="SearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="insertCurrentLocation:"/>
-                <relationship kind="action" name="insertCurrentLocationWithThumb:thumb:"/>
-                <relationship kind="action" name="thumbsDown:"/>
-                <relationship kind="action" name="thumbsUp:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="thumbsDown" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="thumbsUp" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
