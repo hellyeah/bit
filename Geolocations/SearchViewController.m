@@ -24,6 +24,7 @@ enum PinAnnotationTypeTag {
 @implementation SearchViewController
 @synthesize thumbsUp;
 @synthesize thumbsDown;
+@synthesize buttonsView;
 
 @synthesize locationManager = _locationManager;
 @synthesize currentLocation = _currentLocation;
@@ -305,12 +306,14 @@ enum PinAnnotationTypeTag {
 - (IBAction)thumbsUp:(id)sender {
     NSLog(@"%@", self.locationManager.location);
     [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:true]];
-    [thumbsUp setHidden:TRUE];
+    //[thumbsUp setHidden:TRUE];
+    [buttonsView setHidden:TRUE];
 }
 
 - (IBAction)thumbsDown:(id)sender {
     [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:false]];
-    [thumbsDown setHidden:TRUE];
+    //[thumbsDown setHidden:TRUE];
+    [buttonsView setHidden:TRUE];
 }
 
 - (void)setInitialLocation:(CLLocation *)aLocation {

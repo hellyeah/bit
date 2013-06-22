@@ -23,6 +23,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *thumbsUp;
 @property (strong, nonatomic) IBOutlet UIButton *thumbsDown;
+@property (strong, nonatomic) IBOutlet UIView *buttonsView;
 
 - (IBAction)insertCurrentLocation:(id)sender;
 - (IBAction)insertCurrentLocationWithThumb:(id)sender thumb:(NSNumber *)thumb;

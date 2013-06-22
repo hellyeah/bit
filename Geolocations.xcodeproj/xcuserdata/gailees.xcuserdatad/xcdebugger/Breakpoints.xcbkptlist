@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GeoLocations/SearchViewController.h"
-         timestampString = "393566661.478521"
+         timestampString = "393568586.226647"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "@interface SearchViewController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -34,37 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GeoLocations/SearchViewController.m"
-         timestampString = "393567736.712054"
+         timestampString = "393568586.226647"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "343"
-         endingLineNumber = "343"
-         landmarkName = "-configureOverlay"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GeoLocations/SearchViewController.m"
-         timestampString = "393567736.712054"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "345"
-         endingLineNumber = "345"
-         landmarkName = "-configureOverlay"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "GeoLocations/SearchViewController.m"
-         timestampString = "393567736.712054"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "306"
-         endingLineNumber = "306"
+         startingLineNumber = "346"
+         endingLineNumber = "346"
          landmarkName = "-thumbsUp:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +47,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GeoLocations/SearchViewController.m"
-         timestampString = "393567736.712054"
+         timestampString = "393568586.226647"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "188"
-         endingLineNumber = "188"
+         startingLineNumber = "348"
+         endingLineNumber = "348"
+         landmarkName = "-thumbsUp:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GeoLocations/SearchViewController.m"
+         timestampString = "393568586.226647"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "307"
+         endingLineNumber = "307"
+         landmarkName = "-thumbsUp:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GeoLocations/SearchViewController.m"
+         timestampString = "393568586.226647"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "189"
+         endingLineNumber = "189"
          landmarkName = "-insertCurrentLocationWithThumb:thumb:"
          landmarkType = "5">
       </FileBreakpoint>
