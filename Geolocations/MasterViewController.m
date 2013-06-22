@@ -44,10 +44,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDetail"]) {
-        // Row selection
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        [segue.destinationViewController setDetailItem:object];
+        NSLog(@"bkah");
     } else if ([segue.identifier isEqualToString:@"showSearch"]) {
         // Search button
         [segue.destinationViewController setInitialLocation:self.locationManager.location];
@@ -55,24 +52,6 @@
 }
 
 
-#pragma mark - PFQueryTableViewController
-
-- (void)objectsWillLoad {
-    [super objectsWillLoad];
-    
-    // This method is called before a PFQuery is fired to get more objects
-}
-
-- (void)objectsDidLoad:(NSError *)error {
-    [super objectsDidLoad:error];
-    
-    // This method is called every time objects are loaded from Parse via the PFQuery
-}
-
-- (void)printObjects:(NSMutableArray *)blah{
-    NSLog(@"%@", [blah objectAtIndex:0]);
-    NSLog(@"next");
-}
 
 /*
  // Override to customize what kind of query to perform on the class. The default is to query for
@@ -97,48 +76,7 @@
  }
  */
 
-// Override to customize the look of a cell representing an object. The default is to display
-// a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
-// and the imageView being the imageKey in the object.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    // A date formatter for the creation date.
-    static NSDateFormatter *dateFormatter = nil;
-	if (dateFormatter == nil) {
-		dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.timeStyle = NSDateFormatterMediumStyle;
-        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-	}
-    
-	static NSNumberFormatter *numberFormatter = nil;
-	if (numberFormatter == nil) {
-		numberFormatter = [[NSNumberFormatter alloc] init];
-        numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-        numberFormatter.maximumFractionDigits = 3;
-	}
 
-    PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LocationCell"];
-    
-    // Configure the cell
-    PFGeoPoint *geoPoint = object[@"location"];
-    
-	cell.textLabel.text = [dateFormatter stringFromDate:object.updatedAt];
-    
-    NSString *string = [NSString stringWithFormat:@"%@, %@",
-						[numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.latitude]],
-						[numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.longitude]]];
-    
-    cell.detailTextLabel.text = string;
-    
-    NSString *blahz = [dateFormatter stringFromDate:object.updatedAt];
-    
-    NSString *blobz = [blahz stringByAppendingString:string];
-    
-    NSMutableArray *items = [[NSMutableArray alloc] initWithObjects:blobz, nil];
-    
-    [self printObjects:items];
-    
-    return cell;
-}
 
 /*
  // Override if you need to change the ordering of objects in the table.
@@ -243,17 +181,22 @@
 	return _locationManager;
 }
 
-- (IBAction)insertCurrentLocation:(id)sender {
+- (IBAction)insertCurrentLocation:(id)sender{
+    NSNumber *thumb = [NSNumber numberWithBool:true];
+    [self insertCurrentLocationWithThumb:sender thumb:thumb];
+}
+
+- (IBAction)insertCurrentLocationWithThumb:(id)sender thumb:(NSNumber *)thumb{
 	// If it's not possible to get a location, then return.
 	CLLocation *location = self.locationManager.location;
 	if (!location) {
 		return;
 	}
-
+    
 	// Configure the new event with information from the location.
 	CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    NSNumber *thumb = [NSNumber numberWithBool:true];
+    //NSNumber *thumb = [NSNumber numberWithBool:true];
     
     PFObject *object = [PFObject objectWithClassName:@"Location"];
     
@@ -261,10 +204,6 @@
     [object setObject:geoPoint forKey:@"location"];
     
     [object saveEventually:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // Reload the PFQueryTableViewController
-            [self loadObjects];
-        }
     }];
 }
 

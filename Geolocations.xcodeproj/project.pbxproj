@@ -17,7 +17,6 @@
 		C451215D15C885E3005E733A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C451215C15C885E3005E733A /* main.m */; };
 		C451216115C885E3005E733A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C451216015C885E3005E733A /* AppDelegate.m */; };
 		C451216415C885E3005E733A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C451216215C885E3005E733A /* MainStoryboard.storyboard */; };
-		C451216A15C885E3005E733A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C451216915C885E3005E733A /* DetailViewController.m */; };
 		C451217515C88862005E733A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451217415C88862005E733A /* Parse.framework */; };
 		C451217A15C8896D005E733A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451217715C8896D005E733A /* AudioToolbox.framework */; };
 		C451217B15C8896D005E733A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451217815C8896D005E733A /* CFNetwork.framework */; };
@@ -28,7 +27,6 @@
 		C451218515C88994005E733A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451218115C88994005E733A /* Security.framework */; };
 		C451218615C88994005E733A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451218215C88994005E733A /* StoreKit.framework */; };
 		C451218C15C88BAD005E733A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C451218B15C88BAD005E733A /* CoreLocation.framework */; };
-		C451219415C89727005E733A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C451219315C89727005E733A /* MasterViewController.m */; };
 		C4A09FC215ED4BA000E98CC0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A09FC015ED4BA000E98CC0 /* Icon.png */; };
 		C4A09FC315ED4BA000E98CC0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A09FC115ED4BA000E98CC0 /* Icon@2x.png */; };
 		C4C1A26C15CB2DBE0067E7EA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C1A26A15CB2DAB0067E7EA /* MapKit.framework */; };
@@ -56,8 +54,6 @@
 		C451215F15C885E3005E733A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C451216015C885E3005E733A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C451216315C885E3005E733A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C451216815C885E3005E733A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		C451216915C885E3005E733A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C451217415C88862005E733A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C451217715C8896D005E733A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C451217815C8896D005E733A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -68,8 +64,6 @@
 		C451218115C88994005E733A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C451218215C88994005E733A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C451218B15C88BAD005E733A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C451219215C89727005E733A /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		C451219315C89727005E733A /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		C494801F15ED5D6E00507216 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C4A09FC015ED4BA000E98CC0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		C4A09FC115ED4BA000E98CC0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -151,10 +145,6 @@
 				C451215F15C885E3005E733A /* AppDelegate.h */,
 				C451216015C885E3005E733A /* AppDelegate.m */,
 				C451216215C885E3005E733A /* MainStoryboard.storyboard */,
-				C451219215C89727005E733A /* MasterViewController.h */,
-				C451219315C89727005E733A /* MasterViewController.m */,
-				C451216815C885E3005E733A /* DetailViewController.h */,
-				C451216915C885E3005E733A /* DetailViewController.m */,
 				C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */,
 				C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */,
 				C4C1A26D15CB30A80067E7EA /* GeoPointAnnotation.h */,
@@ -262,8 +252,6 @@
 			files = (
 				C451215D15C885E3005E733A /* main.m in Sources */,
 				C451216115C885E3005E733A /* AppDelegate.m in Sources */,
-				C451216A15C885E3005E733A /* DetailViewController.m in Sources */,
-				C451219415C89727005E733A /* MasterViewController.m in Sources */,
 				C4C1A26F15CB30A90067E7EA /* GeoPointAnnotation.m in Sources */,
 				C4370E4915DDCE4C00ED6B24 /* SearchViewController.m in Sources */,
 				C4370E4D15DDD17B00ED6B24 /* CircleOverlay.m in Sources */,

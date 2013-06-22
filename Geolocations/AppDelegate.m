@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import "MasterViewController.h"
+#import "SearchViewController.h"
 
 @implementation AppDelegate
 
@@ -30,8 +30,8 @@
     
     // Stop updating locations while in the background.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    MasterViewController *masterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MasterViewController"];
-    [masterViewController.locationManager stopUpdatingLocation];
+    SearchViewController *searchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    [searchViewController.locationManager stopUpdatingLocation];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -39,8 +39,8 @@
 
     // Start updating locations when the app returns to the foreground.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    MasterViewController *masterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MasterViewController"];
-    [masterViewController.locationManager startUpdatingLocation];
+    SearchViewController *searchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    [searchViewController.locationManager startUpdatingLocation];
 }
 
 @end

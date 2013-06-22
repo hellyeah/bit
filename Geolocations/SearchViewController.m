@@ -24,12 +24,20 @@ enum PinAnnotationTypeTag {
 @end
 
 @implementation SearchViewController
+@synthesize locationManager = _locationManager;
 
 
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    [self.locationManager startUpdatingLocation];
+    
+    [self setInitialLocation:self.locationManager.location];
     
     self.mapView.region = MKCoordinateRegionMake(self.location.coordinate, MKCoordinateSpanMake(0.05f, 0.05f));
     [self configureOverlay];
@@ -191,6 +199,76 @@ enum PinAnnotationTypeTag {
             }
         }
     }];
+}
+
+- (IBAction)thumbsDown:(id)sender {
+    [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:false]];
+}
+
+#pragma mark - MasterViewController
+
+/**
+ Return a location manager -- create one if necessary.
+ */
+- (CLLocationManager *)locationManager {
+	
+    if (_locationManager != nil) {
+		return _locationManager;
+	}
+	
+	_locationManager = [[CLLocationManager alloc] init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    _locationManager.delegate = self;
+    _locationManager.purpose = @"Your current location is used to demonstrate PFGeoPoint and Geo Queries.";
+	
+	return _locationManager;
+}
+
+
+- (IBAction)insertCurrentLocationWithThumb:(id)sender thumb:(NSNumber *)thumb{
+	// If it's not possible to get a location, then return.
+	CLLocation *location = self.locationManager.location;
+	if (!location) {
+		return;
+	}
+    
+	// Configure the new event with information from the location.
+	CLLocationCoordinate2D coordinate = [location coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    //NSNumber *thumb = [NSNumber numberWithBool:true];
+    
+    PFObject *object = [PFObject objectWithClassName:@"Location"];
+    
+    [object setObject:[NSNumber numberWithBool:thumb] forKey:@"thumb"];
+    [object setObject:geoPoint forKey:@"location"];
+    
+    [object saveEventually:^(BOOL succeeded, NSError *error) {
+    }];
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+/**
+ Conditionally enable the Search/Add buttons:
+ If the location manager is generating updates, then enable the buttons;
+ If the location manager is failing, then disable the buttons.
+ */
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    self.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    self.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+- (void)printObjects:(NSMutableArray *)blah{
+    NSLog(@"%@", [blah objectAtIndex:0]);
+    NSLog(@"next");
 }
 
 @end
