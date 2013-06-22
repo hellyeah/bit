@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FDF62321776317700D0DEAA /* HeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF622F1776317700D0DEAA /* HeatMap.m */; };
+		6FDF62331776317700D0DEAA /* HeatMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62311776317700D0DEAA /* HeatMapView.m */; };
+		6FDF62381776344E00D0DEAA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF62351776344E00D0DEAA /* LICENSE */; };
+		6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62371776344E00D0DEAA /* parseCSV.m */; };
+		6FDF623B1776347E00D0DEAA /* Breweries_clean.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */; };
 		C4370E4915DDCE4C00ED6B24 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */; };
 		C4370E4D15DDD17B00ED6B24 /* CircleOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */; };
 		C4370E5015DECC3100ED6B24 /* GeoQueryAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */; };
@@ -37,6 +42,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FDF622E1776317700D0DEAA /* HeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatMap.h; sourceTree = "<group>"; };
+		6FDF622F1776317700D0DEAA /* HeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMap.m; sourceTree = "<group>"; };
+		6FDF62301776317700D0DEAA /* HeatMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatMapView.h; sourceTree = "<group>"; };
+		6FDF62311776317700D0DEAA /* HeatMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapView.m; sourceTree = "<group>"; };
+		6FDF62351776344E00D0DEAA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6FDF62361776344E00D0DEAA /* parseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
+		6FDF62371776344E00D0DEAA /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
+		6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Breweries_clean.csv; sourceTree = "<group>"; };
 		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = GeoLocations/SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = GeoLocations/SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = GeoLocations/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
@@ -100,9 +113,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FDF622D1776317700D0DEAA /* HeatMap */ = {
+			isa = PBXGroup;
+			children = (
+				6FDF622E1776317700D0DEAA /* HeatMap.h */,
+				6FDF622F1776317700D0DEAA /* HeatMap.m */,
+				6FDF62301776317700D0DEAA /* HeatMapView.h */,
+				6FDF62311776317700D0DEAA /* HeatMapView.m */,
+			);
+			name = HeatMap;
+			path = ../HeatMap;
+			sourceTree = "<group>";
+		};
+		6FDF62341776344E00D0DEAA /* cCSVParse */ = {
+			isa = PBXGroup;
+			children = (
+				6FDF62351776344E00D0DEAA /* LICENSE */,
+				6FDF62361776344E00D0DEAA /* parseCSV.h */,
+				6FDF62371776344E00D0DEAA /* parseCSV.m */,
+			);
+			path = cCSVParse;
+			sourceTree = "<group>";
+		};
 		C451214115C885E3005E733A = {
 			isa = PBXGroup;
 			children = (
+				6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */,
+				6FDF62341776344E00D0DEAA /* cCSVParse */,
 				C451215615C885E3005E733A /* Geolocations */,
 				C451214F15C885E3005E733A /* Frameworks */,
 				C451214D15C885E3005E733A /* Products */,
@@ -155,6 +192,7 @@
 				C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */,
 				C451219115C8968A005E733A /* Assets */,
 				C451215715C885E3005E733A /* Supporting Files */,
+				6FDF622D1776317700D0DEAA /* HeatMap */,
 			);
 			path = Geolocations;
 			sourceTree = "<group>";
@@ -240,6 +278,8 @@
 				C4DDA8A416EE583000B5C174 /* Default-568h@2x.png in Resources */,
 				C4DDA8A516EE583000B5C174 /* Default.png in Resources */,
 				C4DDA8A616EE583000B5C174 /* Default@2x.png in Resources */,
+				6FDF62381776344E00D0DEAA /* LICENSE in Resources */,
+				6FDF623B1776347E00D0DEAA /* Breweries_clean.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +296,9 @@
 				C4370E4915DDCE4C00ED6B24 /* SearchViewController.m in Sources */,
 				C4370E4D15DDD17B00ED6B24 /* CircleOverlay.m in Sources */,
 				C4370E5015DECC3100ED6B24 /* GeoQueryAnnotation.m in Sources */,
+				6FDF62321776317700D0DEAA /* HeatMap.m in Sources */,
+				6FDF62331776317700D0DEAA /* HeatMapView.m in Sources */,
+				6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

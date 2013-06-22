@@ -8,6 +8,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
+#import "HeatMap.h"
+#import "HeatMapView.h"
 
 @interface SearchViewController : UIViewController <MKMapViewDelegate,
     CLLocationManagerDelegate>
