@@ -27,7 +27,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 // This sets the spread of the heat from each map point (in screen pts.)
-static const NSInteger kSBHeatRadiusInPoints = 48;
+static const NSInteger kSBHeatRadiusInPoints = 20;
 
 // These affect the transparency of the heatmap
 // Colder areas will be more transparent
@@ -35,13 +35,13 @@ static const NSInteger kSBHeatRadiusInPoints = 48;
 // Play with the pivot point and max alpha to affect the look of the heatmap
 
 // This number should be between 0 and 1
-static const CGFloat kSBAlphaPivotX = 0.333;
+static const CGFloat kSBAlphaPivotX = 0.1;
 
 // This number should be between 0 and MAX_ALPHA
 static const CGFloat kSBAlphaPivotY = 0.5;
 
 // This number should be between 0 and 1
-static const CGFloat kSBMaxAlpha = 0.85;
+static const CGFloat kSBMaxAlpha = 0.3;
 
 @interface HeatMapView ()
 
@@ -83,12 +83,36 @@ static const CGFloat kSBMaxAlpha = 0.85;
     if (value > 1) value = 1;
     value = sqrt(value);
     
+    if(value > 0.5){
+        
+    }
+/*
+    // This number should be between 0 and 1
+    //static const CGFloat kSBAlphaPivotX = 0.333;
+    CGFloat kSBAlphaX = kSBAlphaPivotX;
+    
+    // This number should be between 0 and MAX_ALPHA
+    CGFloat kSBAlphaY = kSBAlphaPivotY;
+    
+    // This number should be between 0 and 1
+    CGFloat kSBMaxA = kSBMaxAlpha;
+*/
+    
     if (value < kSBAlphaPivotY) {
         *alpha = value * kSBAlphaPivotY / kSBAlphaPivotX;
     } else {
         *alpha = kSBAlphaPivotY + ((kSBMaxAlpha - kSBAlphaPivotY) / (1 - kSBAlphaPivotX)) * (value - kSBAlphaPivotX);
     }
     
+   /*
+    CGFloat *one = 1;
+ 
+    if(value < 0.5){
+        alpha = one - alpha;
+    }
+    //NSLog(@"%f", alpha);
+   */
+   
     //formula converts a number from 0 to 1.0 to an rgb color.
     //uses MATLAB/Octave colorbar code
     if(value <= 0) { 

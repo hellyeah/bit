@@ -491,7 +491,9 @@ enum segmentedControlIndicies {
                                                                               [[line objectAtIndex:0] doubleValue]));
         
         NSValue *pointValue = [NSValue value:&point withObjCType:@encode(MKMapPoint)];
-        [toRet setObject:[NSNumber numberWithInt:1] forKey:pointValue];
+        //NSNumber *valueNow = [NSNumber numberWithDouble:[line objectAtIndex:2]];
+        [toRet setObject:[NSNumber numberWithDouble:0.2] forKey:pointValue];
+
     }
     
     return toRet;
