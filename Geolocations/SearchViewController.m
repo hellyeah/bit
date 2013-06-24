@@ -11,6 +11,7 @@
 #import "GeoQueryAnnotation.h"
 #import "parseCSV.h"
 
+
 enum PinAnnotationTypeTag {
     PinAnnotationTypeTagGeoPoint = 0,
     PinAnnotationTypeTagGeoQuery = 1
@@ -24,7 +25,7 @@ enum segmentedControlIndicies {
 };
 
 @interface SearchViewController ()
-- (NSDictionary *)heatMapData;
+- (void)heatMapData;
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, assign) CLLocationDistance radius;
 @property (nonatomic, strong) CircleOverlay *targetOverlay;
@@ -35,9 +36,12 @@ enum segmentedControlIndicies {
 @synthesize thumbsUp;
 @synthesize thumbsDown;
 @synthesize buttonsView;
+@synthesize hm;
+@synthesize setsOfData;
 
 @synthesize locationManager = _locationManager;
 @synthesize currentLocation = _currentLocation;
+//@synthesize accountStore = _accountStore;
 
 #pragma mark - NSObject
 
@@ -63,7 +67,11 @@ enum segmentedControlIndicies {
     
     self.mapView.region = MKCoordinateRegionMake(self.locationManager.location.coordinate, MKCoordinateSpanMake(0.05f, 0.05f));
     
-    [self configureOverlay];
+    PFQuery *query = [PFQuery queryWithClassName:@"ImportedLocations"];
+    
+    setsOfData = [[NSMutableDictionary alloc] initWithCapacity:[query countObjects]];
+    
+    [self extendHeatMapData:query n:0];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -324,6 +332,7 @@ enum segmentedControlIndicies {
     NSLog(@"%@", self.locationManager.location);
     [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:true]];
     //[thumbsUp setHidden:TRUE];
+    //[self configureOverlay];
     [buttonsView setHidden:TRUE];
 }
 
@@ -331,6 +340,7 @@ enum segmentedControlIndicies {
     [self insertCurrentLocationWithThumb:sender thumb:[NSNumber numberWithBool:false]];
     //[thumbsDown setHidden:TRUE];
     [buttonsView setHidden:TRUE];
+    //[self configureOverlay];
 }
 
 - (void)setInitialLocation:(CLLocation *)aLocation {
@@ -361,7 +371,7 @@ enum segmentedControlIndicies {
 
 - (void)configureOverlay {
     
-    HeatMap *hm = [[HeatMap alloc] initWithData:[self heatMapData]];
+    //HeatMap *hm = [[HeatMap alloc] initWithData:[self heatMapData]];
     [self.mapView addOverlay:hm];
     [self.mapView setVisibleMapRect:[hm boundingMapRect] animated:YES];
 
@@ -475,28 +485,51 @@ enum segmentedControlIndicies {
     [self.locationManager stopUpdatingLocation];
 }
 
-- (NSDictionary *)heatMapData
+- (void)heatMapData
 {
-    CSVParser *parser = [CSVParser new];
-    NSString *csvFilePath = [[NSBundle mainBundle] pathForResource:@"Breweries_clean" ofType:@"csv"];
-    [parser openFile:csvFilePath];
-    NSArray *csvContent = [parser parseFile];
-    
-    NSMutableDictionary *toRet = [[NSMutableDictionary alloc] initWithCapacity:[csvContent count]];
-    
-    for (NSArray *line in csvContent) {
-        
-        MKMapPoint point = MKMapPointForCoordinate(
-                                                   CLLocationCoordinate2DMake([[line objectAtIndex:1] doubleValue],
-                                                                              [[line objectAtIndex:0] doubleValue]));
-        
-        NSValue *pointValue = [NSValue value:&point withObjCType:@encode(MKMapPoint)];
-        //NSNumber *valueNow = [NSNumber numberWithDouble:[line objectAtIndex:2]];
-        [toRet setObject:[NSNumber numberWithDouble:0.2] forKey:pointValue];
 
-    }
-    
-    return toRet;
 }
 
+- (void) extendHeatMapData:(PFQuery *)query n:(int)n{
+    //NSLog(@"%ld", (long)[query countObjects]);
+    if(n >= [query countObjects]){
+        [self configureOverlay];
+        return;
+    }
+    [query setLimit:100];
+    query.skip = n;
+    NSMutableDictionary *toRet = [[NSMutableDictionary alloc] initWithCapacity:100];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            for (PFObject *object in objects) {
+                PFGeoPoint *location = [object objectForKey:@"location"];
+                //NSLog(@"%f", location.latitude);
+                //NSLog(@"%f", location.longitude);
+                
+                MKMapPoint point = MKMapPointForCoordinate(
+                                                           CLLocationCoordinate2DMake(
+                                                                                      location.latitude,
+                                                                                      location.longitude));
+                
+                NSValue *pointValue = [NSValue value:&point withObjCType:@encode(MKMapPoint)];
+                if ([object objectForKey:@"thumb"]){
+                    [toRet setObject:[NSNumber numberWithDouble:0.2] forKey:pointValue];
+                }
+            }
+            //HeatMap *hm = [[HeatMap alloc] initWithData:toRet];
+            //[self.mapView addOverlay:hm];
+            //[self.mapView setVisibleMapRect:[hm boundingMapRect] animated:YES];
+        }
+        else {
+            NSLog(@"error");
+        }
+        NSLog(@"heatmap ready");
+        [setsOfData addEntriesFromDictionary:toRet];
+        hm = [[HeatMap alloc] initWithData:setsOfData];
+        [self extendHeatMapData:query n:(n+100)];
+    }];
+    NSLog(@"done heatmap extension");
+}
+     
 @end

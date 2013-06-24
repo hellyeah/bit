@@ -12,6 +12,7 @@
 		6FDF62381776344E00D0DEAA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF62351776344E00D0DEAA /* LICENSE */; };
 		6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62371776344E00D0DEAA /* parseCSV.m */; };
 		6FDF623B1776347E00D0DEAA /* Breweries_clean.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */; };
+		6FDF623D1777DA5300D0DEAA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDF623C1777DA5300D0DEAA /* Social.framework */; };
 		C4370E4915DDCE4C00ED6B24 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */; };
 		C4370E4D15DDD17B00ED6B24 /* CircleOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */; };
 		C4370E5015DECC3100ED6B24 /* GeoQueryAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */; };
@@ -50,6 +51,7 @@
 		6FDF62361776344E00D0DEAA /* parseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
 		6FDF62371776344E00D0DEAA /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
 		6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Breweries_clean.csv; sourceTree = "<group>"; };
+		6FDF623C1777DA5300D0DEAA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = GeoLocations/SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = GeoLocations/SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = GeoLocations/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDF623D1777DA5300D0DEAA /* Social.framework in Frameworks */,
 				C4C1A26C15CB2DBE0067E7EA /* MapKit.framework in Frameworks */,
 				C451218315C88994005E733A /* libz.dylib in Frameworks */,
 				C451218C15C88BAD005E733A /* CoreLocation.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		C451214115C885E3005E733A = {
 			isa = PBXGroup;
 			children = (
+				6FDF623C1777DA5300D0DEAA /* Social.framework */,
 				6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */,
 				6FDF62341776344E00D0DEAA /* cCSVParse */,
 				C451215615C885E3005E733A /* Geolocations */,
