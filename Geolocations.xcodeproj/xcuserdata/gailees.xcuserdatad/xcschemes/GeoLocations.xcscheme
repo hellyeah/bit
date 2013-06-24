@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C451214B15C885E3005E733A"
-               BuildableName = "GeoLocations.app"
+               BuildableName = "Bit.app"
                BlueprintName = "GeoLocations"
                ReferencedContainer = "container:Geolocations.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C451214B15C885E3005E733A"
-            BuildableName = "GeoLocations.app"
+            BuildableName = "Bit.app"
             BlueprintName = "GeoLocations"
             ReferencedContainer = "container:Geolocations.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C451214B15C885E3005E733A"
-            BuildableName = "GeoLocations.app"
+            BuildableName = "Bit.app"
             BlueprintName = "GeoLocations"
             ReferencedContainer = "container:Geolocations.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C451214B15C885E3005E733A"
-            BuildableName = "GeoLocations.app"
+            BuildableName = "Bit.app"
             BlueprintName = "GeoLocations"
             ReferencedContainer = "container:Geolocations.xcodeproj">
          </BuildableReference>
