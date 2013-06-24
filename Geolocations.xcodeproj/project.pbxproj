@@ -12,6 +12,10 @@
 		6FDF62381776344E00D0DEAA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF62351776344E00D0DEAA /* LICENSE */; };
 		6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62371776344E00D0DEAA /* parseCSV.m */; };
 		6FDF623B1776347E00D0DEAA /* Breweries_clean.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */; };
+		71F0FB991777FB12003ED89B /* ret-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB981777FB12003ED89B /* ret-icon.png */; };
+		71F0FB9B1777FBAC003ED89B /* norm-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB9A1777FBAC003ED89B /* norm-icon.png */; };
+		71F0FB9E1778169D003ED89B /* downvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB9C1778169D003ED89B /* downvote.png */; };
+		71F0FB9F1778169D003ED89B /* upvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB9D1778169D003ED89B /* upvote.png */; };
 		C4370E4915DDCE4C00ED6B24 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */; };
 		C4370E4D15DDD17B00ED6B24 /* CircleOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */; };
 		C4370E5015DECC3100ED6B24 /* GeoQueryAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */; };
@@ -50,6 +54,10 @@
 		6FDF62361776344E00D0DEAA /* parseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
 		6FDF62371776344E00D0DEAA /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
 		6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Breweries_clean.csv; sourceTree = "<group>"; };
+		71F0FB981777FB12003ED89B /* ret-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ret-icon.png"; sourceTree = "<group>"; };
+		71F0FB9A1777FBAC003ED89B /* norm-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "norm-icon.png"; sourceTree = "<group>"; };
+		71F0FB9C1778169D003ED89B /* downvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downvote.png; sourceTree = "<group>"; };
+		71F0FB9D1778169D003ED89B /* upvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upvote.png; sourceTree = "<group>"; };
 		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = GeoLocations/SearchViewController.h; sourceTree = SOURCE_ROOT; };
 		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = GeoLocations/SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = GeoLocations/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
@@ -138,6 +146,8 @@
 		C451214115C885E3005E733A = {
 			isa = PBXGroup;
 			children = (
+				71F0FB9A1777FBAC003ED89B /* norm-icon.png */,
+				71F0FB981777FB12003ED89B /* ret-icon.png */,
 				6FDF623A1776347E00D0DEAA /* Breweries_clean.csv */,
 				6FDF62341776344E00D0DEAA /* cCSVParse */,
 				C451215615C885E3005E733A /* Geolocations */,
@@ -179,6 +189,8 @@
 		C451215615C885E3005E733A /* Geolocations */ = {
 			isa = PBXGroup;
 			children = (
+				71F0FB9C1778169D003ED89B /* downvote.png */,
+				71F0FB9D1778169D003ED89B /* upvote.png */,
 				C451215F15C885E3005E733A /* AppDelegate.h */,
 				C451216015C885E3005E733A /* AppDelegate.m */,
 				C451216215C885E3005E733A /* MainStoryboard.storyboard */,
@@ -280,6 +292,10 @@
 				C4DDA8A616EE583000B5C174 /* Default@2x.png in Resources */,
 				6FDF62381776344E00D0DEAA /* LICENSE in Resources */,
 				6FDF623B1776347E00D0DEAA /* Breweries_clean.csv in Resources */,
+				71F0FB991777FB12003ED89B /* ret-icon.png in Resources */,
+				71F0FB9B1777FBAC003ED89B /* norm-icon.png in Resources */,
+				71F0FB9E1778169D003ED89B /* downvote.png in Resources */,
+				71F0FB9F1778169D003ED89B /* upvote.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
