@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "_default": {
+            "link": "bit"
+        }, 
+        "bit": {
+            "applicationId": "HuGFBTXslq03UMlxYIy5k1L2RzIZCIzuDMAstXH6", 
+            "masterKey": "Oh8s0P0lTuRKMhUFIG8rpLpIw6gEseQUH99UKx7K"
+        }
+    }
+}
