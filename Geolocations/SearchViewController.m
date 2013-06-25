@@ -492,6 +492,9 @@ enum segmentedControlIndicies {
 
 - (void) extendHeatMapData:(PFQuery *)query n:(int)n{
     //NSLog(@"%ld", (long)[query countObjects]);
+    if( n == 100){
+        [self configureOverlay];
+    }
     if(n >= [query countObjects]){
         [self configureOverlay];
         return;
