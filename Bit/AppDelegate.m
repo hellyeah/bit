@@ -29,8 +29,7 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     
     // Stop updating locations while in the background.
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    SearchViewController *searchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    SearchViewController *searchViewController = (SearchViewController *)self.window.rootViewController;
     [searchViewController.locationManager stopUpdatingLocation];
 }
 
@@ -38,8 +37,7 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
     // Start updating locations when the app returns to the foreground.
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    SearchViewController *searchViewController = [storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    SearchViewController *searchViewController = (SearchViewController *)self.window.rootViewController;
     [searchViewController.locationManager startUpdatingLocation];
 }
 
