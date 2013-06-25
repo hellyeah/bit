@@ -11,9 +11,6 @@
 #import "HeatMap.h"
 #import "HeatMapView.h"
 
-#import <Accounts/Accounts.h>
-#import <Social/Social.h>
-
 @interface SearchViewController : UIViewController <MKMapViewDelegate,
     CLLocationManagerDelegate>
 
@@ -40,8 +37,5 @@
 - (void)startLocationManager;
 - (void)stopLocationManager;
 - (void) extendHeatMapData:(PFQuery *)query n:(int)n;
-
-//@property (nonatomic) ACAccountStore *accountStore;
-//- (void)grabTweets;
 
 @end

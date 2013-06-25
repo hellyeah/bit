@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		6FDF62321776317700D0DEAA /* HeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF622F1776317700D0DEAA /* HeatMap.m */; };
 		6FDF62331776317700D0DEAA /* HeatMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62311776317700D0DEAA /* HeatMapView.m */; };
-		6FDF62381776344E00D0DEAA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF62351776344E00D0DEAA /* LICENSE */; };
-		6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF62371776344E00D0DEAA /* parseCSV.m */; };
-		6FDF623D1777DA5300D0DEAA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDF623C1777DA5300D0DEAA /* Social.framework */; };
 		71F0FB991777FB12003ED89B /* ret-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB981777FB12003ED89B /* ret-icon.png */; };
 		71F0FB9E1778169D003ED89B /* downvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB9C1778169D003ED89B /* downvote.png */; };
 		71F0FB9F1778169D003ED89B /* upvote.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FB9D1778169D003ED89B /* upvote.png */; };
@@ -50,10 +47,6 @@
 		6FDF622F1776317700D0DEAA /* HeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMap.m; sourceTree = "<group>"; };
 		6FDF62301776317700D0DEAA /* HeatMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatMapView.h; sourceTree = "<group>"; };
 		6FDF62311776317700D0DEAA /* HeatMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapView.m; sourceTree = "<group>"; };
-		6FDF62351776344E00D0DEAA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		6FDF62361776344E00D0DEAA /* parseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
-		6FDF62371776344E00D0DEAA /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
-		6FDF623C1777DA5300D0DEAA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		71F0FB981777FB12003ED89B /* ret-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ret-icon.png"; sourceTree = "<group>"; };
 		71F0FB9A1777FBAC003ED89B /* norm-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "norm-icon.png"; sourceTree = "<group>"; };
 		71F0FB9C1778169D003ED89B /* downvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downvote.png; sourceTree = "<group>"; };
@@ -102,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FDF623D1777DA5300D0DEAA /* Social.framework in Frameworks */,
 				C4C1A26C15CB2DBE0067E7EA /* MapKit.framework in Frameworks */,
 				C451218315C88994005E733A /* libz.dylib in Frameworks */,
 				C451218C15C88BAD005E733A /* CoreLocation.framework in Frameworks */,
@@ -135,24 +127,12 @@
 			path = ../HeatMap;
 			sourceTree = "<group>";
 		};
-		6FDF62341776344E00D0DEAA /* cCSVParse */ = {
-			isa = PBXGroup;
-			children = (
-				6FDF62351776344E00D0DEAA /* LICENSE */,
-				6FDF62361776344E00D0DEAA /* parseCSV.h */,
-				6FDF62371776344E00D0DEAA /* parseCSV.m */,
-			);
-			path = cCSVParse;
-			sourceTree = "<group>";
-		};
 		C451214115C885E3005E733A = {
 			isa = PBXGroup;
 			children = (
 				71F0FBA017792F4C003ED89B /* up-icon.png */,
 				71F0FB9A1777FBAC003ED89B /* norm-icon.png */,
 				71F0FB981777FB12003ED89B /* ret-icon.png */,
-				6FDF623C1777DA5300D0DEAA /* Social.framework */,
-				6FDF62341776344E00D0DEAA /* cCSVParse */,
 				C451215615C885E3005E733A /* Geolocations */,
 				C451214F15C885E3005E733A /* Frameworks */,
 				C451214D15C885E3005E733A /* Products */,
@@ -294,7 +274,6 @@
 				C4DDA8A416EE583000B5C174 /* Default-568h@2x.png in Resources */,
 				C4DDA8A516EE583000B5C174 /* Default.png in Resources */,
 				C4DDA8A616EE583000B5C174 /* Default@2x.png in Resources */,
-				6FDF62381776344E00D0DEAA /* LICENSE in Resources */,
 				71F0FB991777FB12003ED89B /* ret-icon.png in Resources */,
 				71F0FB9E1778169D003ED89B /* downvote.png in Resources */,
 				71F0FB9F1778169D003ED89B /* upvote.png in Resources */,
@@ -317,7 +296,6 @@
 				C4370E5015DECC3100ED6B24 /* GeoQueryAnnotation.m in Sources */,
 				6FDF62321776317700D0DEAA /* HeatMap.m in Sources */,
 				6FDF62331776317700D0DEAA /* HeatMapView.m in Sources */,
-				6FDF62391776344E00D0DEAA /* parseCSV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
