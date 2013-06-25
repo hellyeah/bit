@@ -61,20 +61,20 @@
 		71F0FB9C1778169D003ED89B /* downvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downvote.png; sourceTree = "<group>"; };
 		71F0FB9D1778169D003ED89B /* upvote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upvote.png; sourceTree = "<group>"; };
 		71F0FBA017792F4C003ED89B /* up-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up-icon.png"; sourceTree = "<group>"; };
-		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = GeoLocations/SearchViewController.h; sourceTree = SOURCE_ROOT; };
-		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = GeoLocations/SearchViewController.m; sourceTree = SOURCE_ROOT; };
-		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = GeoLocations/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
-		C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleOverlay.m; path = GeoLocations/CircleOverlay.m; sourceTree = SOURCE_ROOT; };
-		C4370E4E15DECC3100ED6B24 /* GeoQueryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoQueryAnnotation.h; path = GeoLocations/GeoQueryAnnotation.h; sourceTree = SOURCE_ROOT; };
-		C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoQueryAnnotation.m; path = GeoLocations/GeoQueryAnnotation.m; sourceTree = SOURCE_ROOT; };
+		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = Bit/SearchViewController.h; sourceTree = SOURCE_ROOT; };
+		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = Bit/SearchViewController.m; sourceTree = SOURCE_ROOT; };
+		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = Bit/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
+		C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleOverlay.m; path = Bit/CircleOverlay.m; sourceTree = SOURCE_ROOT; };
+		C4370E4E15DECC3100ED6B24 /* GeoQueryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoQueryAnnotation.h; path = Bit/GeoQueryAnnotation.h; sourceTree = SOURCE_ROOT; };
+		C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoQueryAnnotation.m; path = Bit/GeoQueryAnnotation.m; sourceTree = SOURCE_ROOT; };
 		C451214C15C885E3005E733A /* Bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451215015C885E3005E733A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C451215215C885E3005E733A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C451215415C885E3005E733A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C451215815C885E3005E733A /* Geolocations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Geolocations-Info.plist"; sourceTree = "<group>"; };
+		C451215815C885E3005E733A /* Bit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bit-Info.plist"; sourceTree = "<group>"; };
 		C451215A15C885E3005E733A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C451215C15C885E3005E733A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C451215E15C885E3005E733A /* Geolocations-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Geolocations-Prefix.pch"; sourceTree = "<group>"; };
+		C451215E15C885E3005E733A /* Bit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bit-Prefix.pch"; sourceTree = "<group>"; };
 		C451215F15C885E3005E733A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C451216015C885E3005E733A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C451216315C885E3005E733A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -212,16 +212,17 @@
 				C451215715C885E3005E733A /* Supporting Files */,
 				6FDF622D1776317700D0DEAA /* HeatMap */,
 			);
-			path = Geolocations;
+			name = Geolocations;
+			path = Bit;
 			sourceTree = "<group>";
 		};
 		C451215715C885E3005E733A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C451215815C885E3005E733A /* Geolocations-Info.plist */,
+				C451215815C885E3005E733A /* Bit-Info.plist */,
 				C451215915C885E3005E733A /* InfoPlist.strings */,
 				C451215C15C885E3005E733A /* main.m */,
-				C451215E15C885E3005E733A /* Geolocations-Prefix.pch */,
+				C451215E15C885E3005E733A /* Bit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C451214B15C885E3005E733A /* GeoLocations */ = {
+		C451214B15C885E3005E733A /* Bit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C451216D15C885E3005E733A /* Build configuration list for PBXNativeTarget "GeoLocations" */;
+			buildConfigurationList = C451216D15C885E3005E733A /* Build configuration list for PBXNativeTarget "Bit" */;
 			buildPhases = (
 				C451214815C885E3005E733A /* Sources */,
 				C451214915C885E3005E733A /* Frameworks */,
@@ -253,7 +254,7 @@
 			);
 			dependencies = (
 			);
-			name = GeoLocations;
+			name = Bit;
 			productName = Geolocations;
 			productReference = C451214C15C885E3005E733A /* Bit.app */;
 			productType = "com.apple.product-type.application";
@@ -265,9 +266,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0440;
-				ORGANIZATIONNAME = "Parse, Inc.";
+				ORGANIZATIONNAME = Bit;
 			};
-			buildConfigurationList = C451214615C885E3005E733A /* Build configuration list for PBXProject "Geolocations" */;
+			buildConfigurationList = C451214615C885E3005E733A /* Build configuration list for PBXProject "Bit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,7 +280,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C451214B15C885E3005E733A /* GeoLocations */,
+				C451214B15C885E3005E733A /* Bit */,
 			);
 		};
 /* End PBXProject section */
@@ -403,8 +404,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeoLocations/GeoLocations-Prefix.pch";
-				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
+				GCC_PREFIX_HEADER = "Bit/Bit-Prefix.pch";
+				INFOPLIST_FILE = "Bit/Bit-Info.plist";
 				PRODUCT_NAME = Bit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -419,8 +420,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeoLocations/GeoLocations-Prefix.pch";
-				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
+				GCC_PREFIX_HEADER = "Bit/Bit-Prefix.pch";
+				INFOPLIST_FILE = "Bit/Bit-Info.plist";
 				PRODUCT_NAME = Bit;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -430,7 +431,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C451214615C885E3005E733A /* Build configuration list for PBXProject "Geolocations" */ = {
+		C451214615C885E3005E733A /* Build configuration list for PBXProject "Bit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C451216B15C885E3005E733A /* Debug */,
@@ -439,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C451216D15C885E3005E733A /* Build configuration list for PBXNativeTarget "GeoLocations" */ = {
+		C451216D15C885E3005E733A /* Build configuration list for PBXNativeTarget "Bit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C451216E15C885E3005E733A /* Debug */,

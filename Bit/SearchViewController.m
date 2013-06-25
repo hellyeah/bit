@@ -182,7 +182,6 @@ enum segmentedControlIndicies {
 	_locationManager = [[CLLocationManager alloc] init];
     _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     _locationManager.delegate = self;
-    _locationManager.purpose = @"Your current location is used to demonstrate PFGeoPoint and Geo Queries.";
     
 	return _locationManager;
 }
@@ -435,7 +434,6 @@ enum segmentedControlIndicies {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         _locationManager.distanceFilter = 100;
-        _locationManager.purpose = @"We need your location to update your graph";
         _locationManager.delegate = self;
     }
     
@@ -448,8 +446,7 @@ enum segmentedControlIndicies {
            fromLocation:(CLLocation *)oldLocation {
     NSLog(@"latitude %+.6f, longitude %+.6f accuracy %1.2f time %d",
           newLocation.coordinate.latitude,
-          newLocation.coordinate.longitude, newLocation.horizontalAccuracy, abs,
-            ([newLocation.timestamp timeIntervalSinceNow]));
+          newLocation.coordinate.longitude, newLocation.horizontalAccuracy, abs([newLocation.timestamp timeIntervalSinceNow]));
     
     [self.mapView setRegion:MKCoordinateRegionMake(
                                                    CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude),
