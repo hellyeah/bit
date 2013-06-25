@@ -268,40 +268,6 @@ enum segmentedControlIndicies {
     return nil;
 }
 
-/*
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
-    static NSString *CircleOverlayIdentifier = @"Circle";
-    
-    if ([overlay isKindOfClass:[CircleOverlay class]]) {
-        CircleOverlay *circleOverlay = (CircleOverlay *)overlay;
-
-        MKCircleView *annotationView =
-        (MKCircleView *)[mapView dequeueReusableAnnotationViewWithIdentifier:CircleOverlayIdentifier];
-        
-        if (!annotationView) {
-            MKCircle *circle = [MKCircle
-                                circleWithCenterCoordinate:circleOverlay.coordinate
-                                radius:circleOverlay.radius];
-            annotationView = [[MKCircleView alloc] initWithCircle:circle];
-        }
-
-        if (overlay == self.targetOverlay) {
-            annotationView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.3f];
-            annotationView.strokeColor = [UIColor redColor];
-            annotationView.lineWidth = 1.0f;
-        } else {
-            annotationView.fillColor = [UIColor colorWithWhite:0.3f alpha:0.3f];
-            annotationView.strokeColor = [UIColor purpleColor];
-            annotationView.lineWidth = 2.0f;
-        }
-        
-        return annotationView;
-    }
-    
-    return nil;
-}
-*/
-
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
     if (![view isKindOfClass:[MKPinAnnotationView class]] || view.tag != PinAnnotationTypeTagGeoQuery) {
         return;
