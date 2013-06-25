@@ -68,6 +68,8 @@ enum segmentedControlIndicies {
     
     setsOfData = [[NSMutableDictionary alloc] init];
 	
+	hm = [[HeatMap alloc] init];
+
     PFQuery *query = [PFQuery queryWithClassName:@"ImportedLocations"];
     [self extendHeatMapData:query n:0];
 }
