@@ -534,5 +534,9 @@ enum segmentedControlIndicies {
     }];
     NSLog(@"done heatmap extension");
 }
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [buttonsView setHidden:false];
+}
      
 @end
